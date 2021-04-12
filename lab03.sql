@@ -1,5 +1,22 @@
 -- Zadanie 3.1/A
-SELECT department_name "nazwa dzialu", last_name "nazwisko pracownika", department_name "nazwa dzialu",  city "miasto"
+SELECT department_name "nazwa dzialu", last_name "nazwisko pracownika", salary"zarobki"
+from hr.departments hra, hr.employees hrb
+WHERE hra.department_id = hrb.department_id
+AND salary > 12000
+ORDER BY salary DESC;
+
+-- Zadanie 3.1/B
+SELECT department_name "nazwa dzialu", last_name "nazwisko pracownika", salary"zarobki"
+from hr.departments
+JOIN hr.employees
+USING (department_id)
+JOIN hr.locations
+USING (location_id)
+WHERE salary > 12000
+ORDER BY salary DESC;
+
+-- Zadanie 3.2/A
+SELECT last_name "nazwisko pracownika", department_name "nazwa dzialu",  city "miasto"
 from hr.departments hra, hr.employees hrb, hr.locations hrc
 WHERE hra.department_id = hrb.department_id
 AND hra.location_id = hrc.location_id;
@@ -75,4 +92,3 @@ USING (job_id)
 WHERE ROUND(100*salary/max_salary) > 80
 GROUP BY city;
 -- w poleceniu nie bylo podanego sposobu sortowania
-
