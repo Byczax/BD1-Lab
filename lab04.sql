@@ -69,4 +69,3 @@ JOIN ( SELECT department_id, MAX(salary) as maxSalary
        GROUP BY (department_id))
 USING (department_id)
 WHERE salary = maxSalary;
-
