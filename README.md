@@ -84,3 +84,23 @@ Programy napisane na laboratorium z Baz danych 1
 - *4.5. Nazwisk pracowników (last_name), ich wypłat (salary) i średnich płac (salary) w działach, w których pracują.
 
 - *4.6. Nazwisk (last_name), nazw działów (department_name) oraz płac (salary) pracowników, którzy zarabiają najwięcej w dziale.
+
+## Laboratorium 5
+
+- 5.1. Dodaj do tabeli employees pracownika o numerze (employee_id) 10, nazwisku (last_name) 'Kovalsky', emailu (email) 'Koval',  dacie zatrudnienia (hire_date) '10/10/10' oraz numerze stanowiska (job_id) takim samym, jak pracownik który zarabia najwięcej w firmie.
+
+- 5.2. Zmodyfikuj w tabeli employees pracownika o numerze (employee_id) 10, dodając mu pensję (salary) o wartości średniej pensji pracowników, których nazwisko (last_name) rozpoczyna się od litery K.
+
+- 5.3. Usuń z tabeli employees pracownika, który nie ma przypisanego numeru telefonu.
+
+- 5.4. Stwórz tabelę o nazwie STUDENCI i kolumnach:
+  - "Numer_indeksu" - klucz główny, wartości numeryczne do 6-ciu cyfr
+  - "Imie" - ciąg znaków o zmiennej długości do 16 znaków, nie może być pusta
+  - "Nazwisko" - ciąg znaków o zmiennej długości do 32 znaków, nie może być pusta
+  - "Data_ur" - data, wartość może być pusta
+  - "Srednia_ocen" - wartość numeryczna o długości 2 cyfr i dokładności do 1 miejsca po przecinku, zawierająca wartości od 2.0 do 5.5 (użyj ograniczenia CHECK), wartość może być pusta
+  - "Plec" - ciąg znaków o stałej długości (1), dopuszczający jedynie wartości "M" oraz "F", nie może być pusta
+
+- 5.5. Dodaj do tabeli STUDENCI przykładowego studenta.
+
+- 5.6. Zmień w tabeli STUDENCI kolumnę Srednia_ocen ustalając wartość domyślną równą 5.5
