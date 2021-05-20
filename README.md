@@ -2,14 +2,14 @@
 
 Programy napisane na laboratorium z Baz danych 1
 
-|      Wydział elektroniki       |  Kierunek: informatyka techniczna |
-|:-------------------------------|------------------------:|
-| Grupa zajęciowa: Pt 15:15 TP   | Semestr: 2020/2021 Lato |
-| Prowadzący:                    | mgr inż. Adam Włodarczyk |
+| Wydział elektroniki          | Kierunek: informatyka techniczna |
+| :--------------------------- | -------------------------------: |
+| Grupa zajęciowa: Pt 15:15 TP |          Semestr: 2020/2021 Lato |
+| Prowadzący:                  |         mgr inż. Adam Włodarczyk |
 
-| Autor           |
-|:---------------:|
-| Byczko Maciej   |
+|     Autor     |
+| :-----------: |
+| Byczko Maciej |
 
 ## Polecenia
 
@@ -27,7 +27,7 @@ Programy napisane na laboratorium z Baz danych 1
 
 - 2.2. Imion, nazwisk, oraz wypłat pracowników przypisanych do kierownika o numerze 100, których wypłaty wynoszą ponad 10000, posortowanych rosnąco po wypłatach. Użyj polskich nazw kolumn.
 
-- 2.3. Imion, nazwisk, kodów stanowisk oraz wypłat pracowników, których kod stanowiska kończy się na "_MGR", posortowanych malejąco po wypłatach. Użyj polskich nazw kolumn.
+- 2.3. Imion, nazwisk, kodów stanowisk oraz wypłat pracowników, których kod stanowiska kończy się na "\_MGR", posortowanych malejąco po wypłatach. Użyj polskich nazw kolumn.
 
 - 2.4. Kodów oraz nazw stanowisk, dla których nazwa stanowiska składa się co najmniej z dwóch wyrazów. Użyj polskich nazw kolumn.
 
@@ -50,18 +50,20 @@ Programy napisane na laboratorium z Baz danych 1
 ### Laboratorium 3
 
 - 3.1. Nazw działów (department_name), nazwisk (last_name) oraz płac (salary) pracowników, którzy zarabiają ponad 12000, posortowane od najlepiej do najgorzej zarabiających (JOIN, tabele EMPLOYEES, DEPARTMENTS):
+
   - bez wykorzystania polecenia JOIN
   - z wykorzystaniem polecenia JOIN
 
 - 3.2. Nazwisk pracowników (last_name), nazw ich działów (department_name) i miast (city), w których pracują (JOIN, tabele EMPLOYEES, DEPARTMENTS, LOCATIONS):
+
   - bez wykorzystania polecenia JOIN
   - z wykorzystaniem polecenia JOIN
 
 - 3.3. Nazw działów (department_name) i liczby pracowników, którzy w nich pracują (JOIN, tabele DEPARTMENTS, EMPLOYEES).
 
-- *3.4. Państw (country_name) i liczby pracowników, którzy w nich pracują (JOIN).
+- \*3.4. Państw (country_name) i liczby pracowników, którzy w nich pracują (JOIN).
 
-- *3.5. Nazwisk pracowników (last_name) i nazwisk ich kierowników (last_name), posortowane rosnąco po nazwiskach kierowników. Użyj aliasów kolumn. (JOIN)
+- \*3.5. Nazwisk pracowników (last_name) i nazwisk ich kierowników (last_name), posortowane rosnąco po nazwiskach kierowników. Użyj aliasów kolumn. (JOIN)
 
 - 3.6. Nazwisk pracowników (last_name), wszystkich nazw działów (department_name) oraz wszystkich miast (city), w których pracują i mogą pracować. (OUTER JOIN, tabele EMPLOYEES, DEPARTMENTS, LOCATIONS)
 
@@ -81,19 +83,20 @@ Programy napisane na laboratorium z Baz danych 1
 
 - 4.4. Miast (city) i średnich płac (salary) pracowników, w których średnia płaca jest większa, niż maksymalna płaca w Londynie.
 
-- *4.5. Nazwisk pracowników (last_name), ich wypłat (salary) i średnich płac (salary) w działach, w których pracują.
+- \*4.5. Nazwisk pracowników (last_name), ich wypłat (salary) i średnich płac (salary) w działach, w których pracują.
 
-- *4.6. Nazwisk (last_name), nazw działów (department_name) oraz płac (salary) pracowników, którzy zarabiają najwięcej w dziale.
+- \*4.6. Nazwisk (last_name), nazw działów (department_name) oraz płac (salary) pracowników, którzy zarabiają najwięcej w dziale.
 
 ## Laboratorium 5
 
-- 5.1. Dodaj do tabeli employees pracownika o numerze (employee_id) 10, nazwisku (last_name) 'Kovalsky', emailu (email) 'Koval',  dacie zatrudnienia (hire_date) '10/10/10' oraz numerze stanowiska (job_id) takim samym, jak pracownik który zarabia najwięcej w firmie.
+- 5.1. Dodaj do tabeli employees pracownika o numerze (employee_id) 10, nazwisku (last_name) 'Kovalsky', emailu (email) 'Koval', dacie zatrudnienia (hire_date) '10/10/10' oraz numerze stanowiska (job_id) takim samym, jak pracownik który zarabia najwięcej w firmie.
 
 - 5.2. Zmodyfikuj w tabeli employees pracownika o numerze (employee_id) 10, dodając mu pensję (salary) o wartości średniej pensji pracowników, których nazwisko (last_name) rozpoczyna się od litery K.
 
 - 5.3. Usuń z tabeli employees pracownika, który nie ma przypisanego numeru telefonu.
 
 - 5.4. Stwórz tabelę o nazwie STUDENCI i kolumnach:
+
   - "Numer_indeksu" - klucz główny, wartości numeryczne do 6-ciu cyfr
   - "Imie" - ciąg znaków o zmiennej długości do 16 znaków, nie może być pusta
   - "Nazwisko" - ciąg znaków o zmiennej długości do 32 znaków, nie może być pusta
@@ -104,3 +107,22 @@ Programy napisane na laboratorium z Baz danych 1
 - 5.5. Dodaj do tabeli STUDENCI przykładowego studenta.
 
 - 5.6. Zmień w tabeli STUDENCI kolumnę Srednia_ocen ustalając wartość domyślną równą 5.5
+
+## Laboratorium 6
+
+6.1 Sumę dwóch zbiorów posortowaną po minimalnej płacy (operator UNION):
+
+- zbiór pierwszy to tabela zawierająca identyfikator stanowiska (job_id) i minimalną płacę (min_salary) z tabeli JOBS, gdzie płaca minimalna jest niższa od 3000,
+- zbiór drugi to tabela zawierająca identyfikator stanowiska (job_id) i minimalną płacę (min_salary) z tabeli JOBS, gdzie płaca minimalna jest wyższa niż 12000.
+
+  6.2 Iloczyn dwóch zbiorów posortowany odwrotnie po minimalnej płacy (operator INTERSECT):
+
+- zbiór pierwszy to tabela zawierająca identyfikator stanowiska (job_id) i minimalną płacę (min_salary) z tabeli JOBS, gdzie płaca minimalna jest zawarta w przedziale (2000; 5000),
+- zbiór drugi to tabela zawierająca identyfikator stanowiska (job_id) i minimalną płacę (min_salary) z tabeli JOBS, gdzie identyfikator stanowiska kończy się ciągiem znaków "ACCOUNT".
+
+  6.3 Różnicę dwóch zbiorów posortowaną po płacy pracownika (operator MINUS):
+
+- zbiór pierwszy to tabela zawierająca identyfikator pracownika (employee_id), imię (first_name), nazwisko (last_name) i płacę pracownika (salary) z tabeli EMPLOYEES, gdzie identyfikator pracownika to liczba większa od 150,
+- zbiór drugi to tabela zawierająca identyfikator pracownika (employee_id), imię (first_name), nazwisko (last_name) i płacę pracownika (salary) z tabeli EMPLOYEES, gdzie płaca pracownika jest niższa od 10000.
+
+Uwaga: powyższe polecenia można zrealizować również na inne sposoby, ale to laboratorium ma na celu zapoznanie się z operacjami na zbiorach.
